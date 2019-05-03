@@ -1,0 +1,13 @@
+<mat-card class="details-card">
+  <mat-card-title>Build details</mat-card-title>
+  <mat-card-content class="details-content">
+    <mat-form-field>
+      <input matInput type="number" placeholder="Level" [(ngModel)]="currentLevel" (input)="calculateStats()">
+    </mat-form-field>
+    <span>Damage: {{currentDamage}}</span>
+    <span>Health: {{currentHealth}}</span>
+    <span>Attack Speed: {{currentAttackSpeed}}%</span>
+    <span>Move Speed: {{currentMoveSpeed}}%</span>
+    <span>Crit Chance: {{currentCritChance}}%</span>
+  </mat-card-content>
+</mat-card>

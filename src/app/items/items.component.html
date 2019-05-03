@@ -1,0 +1,35 @@
+<ng-template #itemDisplay let-item="data">
+  <mat-card class="item-card">
+    <mat-card-content>{{item.name}}</mat-card-content>
+    <img src="{{item.img}}">
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="addItem(item)">Add</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+
+<ng-template #selectedItemDisplay let-item="data">
+    <mat-card class="item-card">
+      <mat-card-content>
+        <span>{{item.name}}</span>
+        <span>Count: {{item.count}}</span>
+      </mat-card-content>
+      <img src="{{item.img}}">
+      <mat-card-actions>
+        <button mat-raised-button color="accent" (click)="removeItem(item)">Remove</button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-template>
+
+<div class="items-container">
+  <mat-card class="selected-items">
+    <ng-container *ngFor="let item of selectedItems">
+      <ng-container *ngTemplateOutlet="selectedItemDisplay; context: {data: item}"></ng-container>
+    </ng-container>
+  </mat-card>
+  <mat-card class="all-items">
+    <ng-container *ngFor="let item of allItems">
+      <ng-container *ngTemplateOutlet="itemDisplay; context: {data: item}"></ng-container>
+    </ng-container>
+  </mat-card>
+</div>

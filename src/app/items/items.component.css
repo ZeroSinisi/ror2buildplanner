@@ -1,0 +1,30 @@
+.items-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.selected-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  align-items: baseline;
+}
+
+.all-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  align-items: baseline;
+}
+
+.item-card {
+  margin: 4px;
+}
+
+.item-card > mat-card-content {
+  display: flex;
+  flex-direction: column;
+}

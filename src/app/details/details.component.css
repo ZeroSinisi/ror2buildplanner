@@ -1,0 +1,8 @@
+.details-card {
+  min-width: 250px;
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+}

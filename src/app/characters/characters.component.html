@@ -1,0 +1,15 @@
+<div class="character-container">
+  <mat-card class="selected-card">
+    <mat-card-title>Selected</mat-card-title>
+    <img src="{{selectedCharacter.img}}">
+    <mat-card-content>{{selectedCharacter.name}}</mat-card-content>
+  </mat-card>
+  <mat-divider></mat-divider>
+  <div class="character-options">
+    <ng-container *ngFor="let character of characters">
+      <button mat-raised-button class="character-button" (click)="selectCharacter(character)">
+        <img src="{{character.img}}">
+      </button>
+    </ng-container>
+  </div>
+</div>
